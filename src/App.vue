@@ -80,13 +80,13 @@ export default {
     };
   },
   created() {
-    localStorage.getItem("amount1", this.amount1) === undefined
+    localStorage.getItem("amount1", this.amount1) === null
       ? "0"
       : (this.amount1 = localStorage.getItem("amount1", this.amount1));
-    localStorage.getItem("amount2", this.amount2) === undefined
+    localStorage.getItem("amount2", this.amount2) === null
       ? "0"
       : (this.amount2 = localStorage.getItem("amount2", this.amount2));
-    localStorage.getItem("amount3", this.amount3) === undefined
+    localStorage.getItem("amount3", this.amount3) === null
       ? "0"
       : (this.amount3 = localStorage.getItem("amount3", this.amount3));
     this.calculator();
