@@ -152,8 +152,6 @@ export default {
       );
       let result2 = result * this.amount7;
       let result3 = result2 - result2 * 0.154;
-      //   let result2 = result * ((this.amount7 * result) * 0.154);
-      console.log(result2, result3);
       this.amount8 = this.setComma(String(result3)).concat("원");
       this.$emit("toss", this.amount8);
     },

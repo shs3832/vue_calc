@@ -59,7 +59,8 @@ export default {
 
 <style>
 body {
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -71,6 +72,7 @@ body {
 .navigation {
   background: darkslateblue;
   padding: 10px;
+  overflow: hidden;
 }
 .navigation button {
   width: 50%;
