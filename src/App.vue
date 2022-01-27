@@ -81,7 +81,7 @@ body {
   border-right: 1px solid #fff;
 }
 .fixedResult {
-  position: fixed;
+  position: relative;
   width: 100%;
   padding: 20px;
   display: flex;
