@@ -36,6 +36,9 @@
           >
             10만원
           </button>
+          <button type="button" @click="resetAmount" class="btn btn-primary">
+            대출금 초기화
+          </button>
         </div>
       </div>
       <div class="mb-3">
@@ -50,6 +53,11 @@
         <div class="d-grid gap-2">
           <button type="button" @click="calculator" class="btn btn-danger">
             계산하기
+          </button>
+        </div>
+        <div class="d-grid gap-2 mt-3">
+          <button type="button" @click="resetAll" class="btn btn-warning">
+            초기화
           </button>
         </div>
       </div>
@@ -110,6 +118,14 @@ export default {
       let calc = String(parseInt(value2) + parseInt(str));
       calc = String(calc);
       this.amount1 = this.setComma(calc);
+    },
+    resetAmount() {
+      this.amount1 = "0";
+    },
+    resetAll() {
+      this.amount1 = "0";
+      this.amount2 = "0";
+      this.amount3 = "0";
     },
     calculator() {
       localStorage.setItem("amount1", this.amount1);
