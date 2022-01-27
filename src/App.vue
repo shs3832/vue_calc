@@ -73,13 +73,22 @@ export default {
   name: "App",
   data() {
     return {
-      amount1: "10000000",
+      amount1: "10,000,000",
       amount2: "4.13",
       amount3: "3",
       amount4: "",
     };
   },
-  mounted() {
+  created() {
+    localStorage.getItem("amount1", this.amount1) === undefined
+      ? "0"
+      : (this.amount1 = localStorage.getItem("amount1", this.amount1));
+    localStorage.getItem("amount2", this.amount2) === undefined
+      ? "0"
+      : (this.amount2 = localStorage.getItem("amount2", this.amount2));
+    localStorage.getItem("amount3", this.amount3) === undefined
+      ? "0"
+      : (this.amount3 = localStorage.getItem("amount3", this.amount3));
     this.calculator();
   },
   methods: {
@@ -103,8 +112,10 @@ export default {
       this.amount1 = this.setComma(calc);
     },
     calculator() {
+      localStorage.setItem("amount1", this.amount1);
+      localStorage.setItem("amount2", this.amount2);
+      localStorage.setItem("amount3", this.amount3);
       let value1 = this.removeComma(this.amount1);
-      console.log(value1);
       let result = Math.floor(
         (parseInt(value1) *
           (parseInt(this.amount2) * 0.01) *
