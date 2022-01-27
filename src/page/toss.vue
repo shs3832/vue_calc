@@ -18,29 +18,25 @@
         <button
           type="button"
           @click="addAmount(10000000)"
-          class="btn btn-sm btn-primary"
+          class="btn btn-primary"
         >
           1000만원
         </button>
         <button
           type="button"
           @click="addAmount(1000000)"
-          class="btn btn-sm btn-primary"
+          class="btn btn-primary"
         >
           100만원
         </button>
         <button
           type="button"
           @click="addAmount(100000)"
-          class="btn btn-sm btn-primary"
+          class="btn btn-primary"
         >
           10만원
         </button>
-        <button
-          type="button"
-          @click="resetAmount"
-          class="btn btn-sm btn-primary"
-        >
+        <button type="button" @click="resetAmount" class="btn btn-primary">
           예치금 초기화
         </button>
       </div>
