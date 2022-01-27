@@ -73,10 +73,10 @@ export default {
   name: "App",
   data() {
     return {
-      amount1: "10,000,000",
-      amount2: "4.13",
-      amount3: "3",
-      amount4: "",
+      amount1: "0",
+      amount2: "0",
+      amount3: "0",
+      amount4: "0",
     };
   },
   created() {
