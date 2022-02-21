@@ -151,7 +151,7 @@ export default {
         (parseInt(value1) * (parseInt(this.amount6) * 0.01)) / 365
       );
       let result2 = result * this.amount7;
-      let result3 = result2 - result2 * 0.154;
+      let result3 = Math.floor(result2 - result2 * 0.154);
       this.amount8 = this.setComma(String(result3)).concat("원");
       this.$emit("toss", this.amount8);
     },
