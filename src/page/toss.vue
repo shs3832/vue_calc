@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="mt-3">토스뱅크 일별이자계산</h1>
+    <h1 class="mt-3">거래은행 일별이자계산</h1>
     <small>이자과세 15.4%</small>
     <hr />
     <div class="mb-3">
@@ -47,8 +47,8 @@
         type="text"
         id="input6"
         class="form-control"
-        readonly
         v-model="amount6"
+        @input="storageSet('amount6', amount6)"
       />
     </div>
     <div class="mb-3">
@@ -92,7 +92,7 @@ export default {
   data() {
     return {
       amount5: "0",
-      amount6: "2",
+      amount6: "3",
       amount7: "0",
       amount8: "0",
     };
@@ -139,7 +139,6 @@ export default {
     },
     resetAll() {
       this.amount5 = "0";
-      this.amount6 = "0";
       this.amount7 = "0";
     },
     calculator() {

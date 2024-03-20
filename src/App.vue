@@ -6,7 +6,7 @@
           마통이자계산
         </button>
         <button type="button" @click="visible = false" class="btn">
-          토스이자계산
+          통장이자계산
         </button>
       </div>
     </nav>
@@ -22,7 +22,7 @@
         {{ value1 }}
       </div>
       <div>
-        토스이자계산결과<br />
+        통장이자계산결과<br />
         {{ value2 }}
       </div>
     </div>
